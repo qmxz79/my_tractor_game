@@ -25,7 +25,9 @@ function dealCards(deck, players) {
     for (let j = 0; j < players.length; j++) {
       let card = deck.pop();
       updatePlayerHands(players[j], card);
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      setTimeout(() => {
+        // 延迟1秒执行
+      }, 1000);
     }
   }
 }
