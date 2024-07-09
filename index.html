@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tractor Poker Game</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <h1>Tractor Poker Game</h1>
+
+  <div id="player-name-input">
+    <label>
+      Player 1 name:
+      <input type="text" id="player1-name" value="Player 1">
+    </label>
+    <label>
+      Player 2 name:
+      <input type="text" id="player2-name" value="Player 2">
+    </label>
+    <label>
+      Player 3 name:
+      <input type="text" id="player3-name" value="Player 3">
+    </label>
+    <label>
+      Player 4 name:
+      <input type="text" id="player4-name" value="Player 4">
+    </label>
+    <div id="game-mode-selection">
+      <label>
+        <input type="radio" name="gameMode" value="human-vs-human" checked> Human vs Human
+      </label>
+      <label>
+        <input type="radio" name="gameMode" value="human-vs-ai"> Human vs AI
+      </label>
+    </div>
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <div id="game-board">
+    <div id="player-hands">
+      <div class="player-hand" id="Player 1-hand"></div>
+      <div class="player-hand" id="Player 2-hand"></div>
+      <div class="player-hand" id="Player 3-hand"></div>
+      <div class="player-hand" id="Player 4-hand"></div>
+    </div>
+    <div id="trick-cards">
+      <div class="card" id="Trick 1"></div>
+      <div class="card" id="Trick 2"></div>
+      <div class="card" id="Trick 3"></div>
+      <div class="card" id="Trick 4"></div>
+    </div>
+    <div id="player-scores">
+      <div class="player-score" id="Player 1-score">0</div>
+      <div class="player-score" id="Player 2-score">0</div>
+      <div class="player-score" id="Player 3-score">0</div>
+      <div class="player-score" id="Player 4-score">0</div>
+    </div>
+  </div>
+
+  <script src="JS/utils.js"></script>
+  <script src="JS/game.js"></script>
+</body>
+</html>
