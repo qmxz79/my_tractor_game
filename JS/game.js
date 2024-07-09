@@ -1,6 +1,5 @@
-import { buildDeck, shuffleDeck, dealCards, getDealer, getTrump, getValidCards, getWinningPlayer, calculateScore, isGameOver, getWinner } from './utils.js';
-let players = [];
-let gameMode = 'human-vs-human';
+// game.js
+import { shuffleDeck, dealCards, getDealer, getTrump, getValidCards, getWinningPlayer, calculateScore, isGameOver, getWinner, buildDeck } from './utils.js';
 
 function startGame() {
   // 获取玩家输入的名称
@@ -19,7 +18,9 @@ function startGame() {
   // 初始化游戏状态
   let deck = buildDeck();
   shuffleDeck(deck);
-  dealCards(deck, players);
+  await dealCards(deck, players);
+  // ...
+}
   let dealer = getDealer();
   let trump = getTrump(dealer);
   let scores = [0, 0, 0, 0];
