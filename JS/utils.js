@@ -19,15 +19,15 @@ export function shuffleDeck(deck) {
   }
 }
 
-export async function dealCards(deck, players) {
-  // 发牌给4个玩家
-  for (let i = 0; i < 54; i++) {
-    for (let j = 0; j < players.length; j++) {
-      let card = deck.pop();
-      await updatePlayerHands(players[j], card);
-      await new Promise(resolve => setTimeout(resolve, 1000));
-    }
-  }
+export function updatePlayerHands(player, card) {
+  let playerHandElement = document.getElementById(`${player}-hand`);
+  let cardElement = createCardElement(card);
+  playerHandElement.appendChild(cardElement);
+
+  // 模拟1秒钟的延迟
+  setTimeout(() => {
+    // 其他逻辑
+  }, 1000);
 }
 
 export function getDealer() {
