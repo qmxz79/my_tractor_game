@@ -1,10 +1,12 @@
+export { buildDeck } from './buildDeck.js';
+export { shuffleDeck, dealCards, getDealer, getTrump, getValidCards, getWinningPlayer, calculateScore, isGameOver, getWinner, updatePlayerHands, createCardElement } from './utilsFunctions.js';
 window.buildDeck = buildDeck;
 window.shuffleDeck = shuffleDeck;
   // 以及其他需要在 game.js 中使用的函数
 export function buildDeck() {
   // 创建216张扑克牌
   let deck = [];
-  let suits = ['♠', '♥', '♦', '♣'];
+ 让 花色 = ['♠', '♥', '♦', '♣'];
   let ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
   for (let suit of suits) {
     for (let rank of ranks) {
