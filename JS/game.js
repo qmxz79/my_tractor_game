@@ -1,3 +1,4 @@
+import { buildDeck, shuffleDeck, dealCards, getDealer, getTrump, getValidCards, getWinningPlayer, calculateScore, isGameOver, getWinner } from './utils.js';
 let players = [];
 let gameMode = 'human-vs-human';
 
