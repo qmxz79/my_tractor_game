@@ -1,3 +1,6 @@
+window.buildDeck = buildDeck;
+window.shuffleDeck = shuffleDeck;
+  // 以及其他需要在 game.js 中使用的函数
 export function buildDeck() {
   // 创建216张扑克牌
   let deck = [];
